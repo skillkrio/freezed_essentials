@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'pages/collections_page.dart';
-import 'pages/method_page.dart';
-import 'pages/mutable_person_page.dart';
-import 'pages/person_page.dart';
+import 'package:riverpod_essentials/pages/hotel_list_page.dart';
 import 'widgets/custom_button.dart';
 
 void main() {
@@ -16,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Freezed Data Class',
+      title: 'Freezed with json serializable',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -39,20 +35,8 @@ class MyHomePage extends StatelessWidget {
           shrinkWrap: true,
           children: const [
             CustomButton(
-              title: 'Person',
-              child: PersonPage(),
-            ),
-            CustomButton(
-              title: 'Mutable Person',
-              child: MutablePersonPage(),
-            ),
-            CustomButton(
-              title: 'Collections',
-              child: CollectionsPage(),
-            ),
-            CustomButton(
-              title: 'Method',
-              child: MethodPage(),
+              title: 'Hotel List',
+              child: HotelListPage(),
             ),
           ],
         ),
